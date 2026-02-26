@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smartview Constructions – Leading construction company in Pondicherry. New build houses in Villianur & French City. 30+ years of expertise under Er. Venkataraman, MD." />
+  <meta name="keywords" content="construction company Pondicherry, new build houses Villianur, construction Pondicherry, home builders Pondicherry, Smartview Constructions, French City houses" />
+  <meta name="author" content="Smartview Constructions" />
+  <meta property="og:title" content="Smartview Constructions – Building Dream Homes in Pondicherry" />
+  <meta property="og:description" content="New fully furnished, semi-furnished & unfurnished houses in Villianur & French City at unbeatable prices." />
+  <meta property="og:type" content="website" />
+  <title>Smartview Constructions | Dream Homes in Pondicherry</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics Placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <style>
+    /* =============================================
+       CSS – Language 2
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1a2c42;
+      --blue:   #2563a8;
+      --sky:    #3b82c4;
+      --orange: #e8620a;
+      --orange-h:#d1540a;
+      --green:  #2d7a4e;
+      --gray:   #5a6475;
+      --light:  #f4f7fb;
+      --white:  #ffffff;
+      --border: #d8e2ef;
+      --font-h: 'Montserrat', sans-serif;
+      --font-b: 'Open Sans', sans-serif;
+      --shadow: 0 4px 24px rgba(26,44,66,0.13);
+      --radius: 12px;
+      --transition: all 0.32s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-b); color: var(--navy); background: var(--white); overflow-x: hidden; }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { width: 90%; max-width: 1180px; margin: 0 auto; }
+    .section { padding: 88px 0; }
+    .section-label { font-family: var(--font-h); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+    .section-title { font-family: var(--font-h); font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 16px; }
+    .section-sub { font-size: 1.05rem; color: var(--gray); max-width: 640px; line-height: 1.7; }
+
+    /* ——— BUTTONS ——— */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 8px; font-family: var(--font-h); font-weight: 700; font-size: 0.93rem; cursor: pointer; transition: var(--transition); border: none; letter-spacing: 0.02em; }
+    .btn-orange { background: var(--orange); color: var(--white); box-shadow: 0 4px 16px rgba(232,98,10,0.32); }
+    .btn-orange:hover { background: var(--orange-h); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,98,10,0.4); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.7); }
+    .btn-outline:hover { background: rgba(255,255,255,0.15); }
+    .btn-navy { background: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--blue); transform: translateY(-2px); }
+    .btn-sm { padding: 10px 20px; font-size: 0.85rem; }
+
+    /* ——— STICKY HEADER ——— */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: transparent;
+      transition: background 0.4s, box-shadow 0.4s, padding 0.4s;
+      padding: 22px 0;
+    }
+    #header.scrolled {
+      background: rgba(26,44,66,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+      padding: 12px 0;
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { font-family: var(--font-h); font-weight: 900; font-size: 1.25rem; color: var(--white); line-height: 1.1; }
+    .logo span { color: var(--orange); display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 30px; }
+    nav a { color: rgba(255,255,255,0.85); font-family: var(--font-h); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.02em; transition: color 0.2s; }
+    nav a:hover { color: var(--orange); }
+    .header-cta { display: flex; align-items: center; gap: 12px; }
+    .call-chip { color: var(--white); font-family: var(--font-h); font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 6px; }
+    .call-chip svg { color: var(--orange); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { color: var(--white); font-family: var(--font-h); font-weight: 700; font-size: 1.4rem; }
+    .mobile-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--white); font-size: 2rem; cursor: pointer; }
+
+    /* ——— HERO ——— */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(26,44,66,0.78) 0%, rgba(37,99,168,0.55) 100%),
+        url('https://picsum.photos/seed/building-hero/1600/900') center/cover no-repeat;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-content { padding-top: 100px; max-width: 780px; }
+    .hero-badge { display: inline-flex; gap: 20px; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.22); border-radius: 50px; padding: 8px 20px; margin-bottom: 28px; }
+    .hero-badge span { color: rgba(255,255,255,0.9); font-family: var(--font-h); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; display: flex; align-items: center; gap: 5px; }
+    .hero-badge span::before { content: '✓'; color: #4ade80; font-weight: 900; }
+    .hero-h1 { font-family: var(--font-h); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+    .hero-h1 em { color: var(--orange); font-style: normal; }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.18rem); color: rgba(255,255,255,0.88); line-height: 1.75; margin-bottom: 36px; max-width: 640px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .call-link { color: var(--white); font-family: var(--font-h); font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 8px; transition: var(--transition); }
+    .call-link:hover { color: var(--orange); }
+    .hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.6); font-family: var(--font-h); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; animation: bounce 2s infinite; }
+    .hero-scroll svg { animation: arrowBounce 1.5s ease-in-out infinite; }
+    @keyframes bounce { 0%,100%{transform: translateX(-50%) translateY(0)} 50%{transform: translateX(-50%) translateY(-6px)} }
+    @keyframes arrowBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+
+    /* ——— TRUST BAR ——— */
+    .trust-bar { background: var(--navy); padding: 22px 0; }
+    .trust-inner { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: center; }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-family: var(--font-h); font-size: 0.85rem; font-weight: 600; padding: 0 20px; }
+    .trust-item:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.15); }
+    .trust-icon { width: 32px; height: 32px; background: rgba(232,98,10,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--orange); }
+
+    /* ——— ABOUT ——— */
+    #about { background: var(--light); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-photos { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; gap: 12px; }
+    .photo-slot { border-radius: var(--radius); overflow: hidden; position: relative; background: var(--border); }
+    .photo-slot:first-child { grid-row: span 2; }
+    .photo-slot img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .photo-slot:hover img { transform: scale(1.04); }
+    .photo-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(26,44,66,0.75)); color: var(--white); font-family: var(--font-h); font-size: 0.78rem; font-weight: 700; padding: 20px 14px 12px; }
+    .about-bullets { list-style: none; margin: 20px 0 28px; display: flex; flex-direction: column; gap: 10px; }
+    .about-bullets li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.96rem; color: var(--gray); line-height: 1.5; }
+    .about-bullets li::before { content: ''; display: inline-block; width: 8px; height: 8px; min-width: 8px; background: var(--orange); border-radius: 50%; margin-top: 7px; }
+    .md-tag { display: inline-flex; align-items: center; gap: 10px; background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 10px 18px; margin-top: 28px; }
+    .md-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--navy)); display: flex; align-items: center; justify-content: center; color: var(--white); font-family: var(--font-h); font-weight: 800; font-size: 1rem; }
+    .md-info strong { display: block; font-family: var(--font-h); font-size: 0.9rem; color: var(--navy); }
+    .md-info span { font-size: 0.8rem; color: var(--gray); }
+
+    /* ——— SERVICES ——— */
+    #services .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; }
+    .service-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--blue); }
+    .service-img { height: 190px; overflow: hidden; background: var(--light); }
+    .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .service-card:hover .service-img img { transform: scale(1.05); }
+    .service-body { padding: 22px 20px; }
+    .service-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(37,99,168,0.1); display: flex; align-items: center; justify-content: center; color: var(--blue); margin-bottom: 14px; }
+    .service-body h3 { font-family: var(--font-h); font-size: 1.02rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .service-body p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+
+    /* ——— PROJECTS ——— */
+    #projects { background: var(--light); }
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 52px; }
+    .house-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 16px rgba(26,44,66,0.07); transition: var(--transition); }
+    .house-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .house-img { height: 230px; overflow: hidden; position: relative; background: var(--border); }
+    .house-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .house-card:hover .house-img img { transform: scale(1.04); }
+    .house-badge { position: absolute; top: 14px; left: 14px; background: var(--orange); color: var(--white); font-family: var(--font-h); font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
+    .house-badge.limited { background: #c0392b; }
+    .house-body { padding: 22px 24px 24px; }
+    .house-location { font-size: 0.78rem; color: var(--orange); font-family: var(--font-h); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+    .house-body h3 { font-family: var(--font-h); font-size: 1.12rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+    .house-body p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; margin-bottom: 16px; }
+    .house-price { font-family: var(--font-h); font-size: 1.4rem; font-weight: 900; color: var(--green); margin-bottom: 18px; }
+    .house-price span { font-size: 0.85rem; color: var(--gray); font-weight: 500; }
+    .house-actions { display: flex; gap: 10px; }
+
+    /* ——— TESTIMONIALS ——— */
+    #testimonials { background: var(--navy); overflow: hidden; }
+    #testimonials .section-title { color: var(--white); }
+    #testimonials .section-label { color: var(--orange); }
+    .testimonials-track { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(.4,0,.2,1); }
+    .testimonials-viewport { overflow: hidden; margin-top: 48px; }
+    .testi-card { min-width: calc(33.333% - 16px); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 32px 28px; flex-shrink: 0; transition: var(--transition); }
+    .testi-card:hover { background: rgba(255,255,255,0.1); }
+    .stars { color: #fbbf24; font-size: 1.1rem; margin-bottom: 16px; letter-spacing: 2px; }
+    .testi-quote { color: rgba(255,255,255,0.88); font-size: 0.97rem; line-height: 1.75; margin-bottom: 24px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .testi-avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--orange)); display: flex; align-items: center; justify-content: center; color: var(--white); font-family: var(--font-h); font-weight: 800; font-size: 1rem; overflow: hidden; }
+    .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .testi-name { font-family: var(--font-h); font-weight: 700; color: var(--white); font-size: 0.92rem; }
+    .testi-loc { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+    .slider-dots { display: flex; gap: 8px; justify-content: center; margin-top: 36px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); cursor: pointer; transition: var(--transition); }
+    .dot.active { background: var(--orange); width: 28px; border-radius: 4px; }
+
+    /* ——— CONTACT ——— */
+    #contact .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 52px; }
+    .contact-info h3 { font-family: var(--font-h); font-size: 1.45rem; font-weight: 800; color: var(--navy); margin-bottom: 20px; }
+    .contact-items { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+    .c-icon { width: 44px; height: 44px; min-width: 44px; border-radius: 10px; background: rgba(37,99,168,0.1); display: flex; align-items: center; justify-content: center; color: var(--blue); }
+    .c-text strong { display: block; font-family: var(--font-h); font-size: 0.85rem; color: var(--navy); margin-bottom: 2px; }
+    .c-text span { font-size: 0.9rem; color: var(--gray); }
+    .map-embed { width: 100%; height: 220px; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; margin-top: 24px; }
+    .contact-form { background: var(--light); border-radius: var(--radius); padding: 36px; }
+    .contact-form h3 { font-family: var(--font-h); font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group label { font-family: var(--font-h); font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 12px 16px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-family: var(--font-b); font-size: 0.93rem; color: var(--navy);
+      background: var(--white); transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--blue); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-success { display: none; text-align: center; padding: 20px; background: rgba(45,122,78,0.1); border-radius: 8px; color: var(--green); font-family: var(--font-h); font-weight: 700; }
+
+    /* ——— FOOTER ——— */
+    footer { background: #111c2b; color: rgba(255,255,255,0.7); }
+    .footer-main { padding: 64px 0 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+    .footer-brand .logo { font-size: 1.15rem; margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 260px; }
+    .footer-socials { display: flex; gap: 12px; margin-top: 20px; }
+    .social-btn { width: 38px; height: 38px; border-radius: 8px; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: var(--transition); font-size: 1rem; }
+    .social-btn:hover { background: var(--orange); color: var(--white); }
+    .footer-col h4 { font-family: var(--font-h); font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul li a { font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--orange); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; flex-wrap: wrap; gap: 10px; }
+    .footer-bottom a { transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--orange); }
+
+    /* ——— WHATSAPP FLOAT ——— */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; }
+    .wa-btn { width: 58px; height: 58px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.5); transition: var(--transition); }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+    .wa-pulse { position: absolute; top: 0; right: 0; width: 100%; height: 100%; border-radius: 50%; background: rgba(37,211,102,0.4); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%{transform:scale(1);opacity:1} 100%{transform:scale(1.8);opacity:0} }
+
+    /* ——— PHONE STICKY BAR (MOBILE) ——— */
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 800; background: var(--navy); padding: 12px 16px; gap: 10px; }
+
+    /* ——— REVEAL ANIMATIONS ——— */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ——— RESPONSIVE ——— */
+    @media (max-width: 1024px) {
+      #services .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .testi-card { min-width: calc(50% - 12px); }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 60px 0; }
+      nav, .header-cta .btn { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photos { grid-template-columns: 1fr 1fr; grid-template-rows: 180px; }
+      .about-photos .photo-slot:first-child { grid-row: auto; }
+      .projects-grid { grid-template-columns: 1fr; }
+      #contact .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .testi-card { min-width: 85%; }
+      .footer-main { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .sticky-cta { display: flex; }
+      body { padding-bottom: 72px; }
+      .wa-float { bottom: 90px; }
+    }
+    @media (max-width: 480px) {
+      #services .services-grid { grid-template-columns: 1fr; }
+      .hero-h1 { font-size: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .trust-item:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .trust-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== STICKY HEADER ==================== -->
+<header id="header">
+  <div class="container header-inner">
+    <a href="#hero" class="logo">
+      Smartview Constructions
+      <span>Building Dreams in Pondicherry</span>
+    </a>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <div class="call-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+        +91-9443-069285
+      </div>
+      <a href="#contact" class="btn btn-orange btn-sm">Book Now</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#hero" class="mobile-link">Home</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="https://wa.me/919443069285" class="btn btn-orange">WhatsApp Us</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>30+ Years Experience</span>
+        <span>Quality Certified</span>
+        <span>Pondicherry Trusted</span>
+      </div>
+      <h1 class="hero-h1">
+        Building Your<br/><em>Dream Home</em><br/>in Pondicherry
+      </h1>
+      <p class="hero-sub">
+        Led by <strong style="color:#fff;">Er. Venkataraman, MD</strong> with 30+ years of expertise. New fully furnished, semi-furnished & unfurnished houses now available at unbeatable prices in <strong style="color:#fff;">Villianur</strong> &amp; <strong style="color:#fff;">French City!</strong>
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/919443069285?text=Hello%20Smartview%20Constructions%2C%20I'd%20like%20to%20book%20an%20appointment." class="btn btn-orange" target="_blank" rel="noopener">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Book Appointment Now
+        </a>
+        <a href="tel:+919443069285" class="call-link">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          Call Now: +91-9443-069285
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.6)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<div class="trust-bar">
+  <div class="container trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      30+ Years Experience
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+      500+ Homes Delivered
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+      Villianur &amp; French City
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></div>
+      Quality Certified Construction
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      On-Time Delivery
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photos reveal-left">
+        <div class="photo-slot">
+          <img src="https://picsum.photos/seed/construction1/600/420" alt="Smartview construction project Pondicherry" loading="lazy" />
+          <div class="photo-label">Our Projects</div>
+        </div>
+        <div class="photo-slot">
+          <img src="https://picsum.photos/seed/construction-team/400/300" alt="Construction team at work" loading="lazy" />
+          <div class="photo-label">Expert Team</div>
+        </div>
+        <div class="photo-slot">
+          <img src="https://picsum.photos/seed/newhome-family/400/300" alt="Happy family in new home" loading="lazy" />
+          <div class="photo-label">Happy Clients</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">Why Choose Smartview Constructions?</h2>
+        <p class="section-sub">Under the visionary leadership of Er. Venkataraman Sir, with over 30 years in construction, we deliver excellence. From foundation to finish, our team specializes in durable, stylish homes tailored for Pondicherry living.</p>
+        <ul class="about-bullets">
+          <li>New build homes — fully furnished, semi-furnished &amp; unfurnished options</li>
+          <li>Complete renovations &amp; remodeling for existing homes</li>
+          <li>Interior design, modular kitchens &amp; custom furnishing packages</li>
+          <li>Civil &amp; structural engineering — foundations, columns, RCC work</li>
+          <li>Site development, land preparation &amp; landscaping</li>
+          <li>Transparent pricing, no hidden charges — best value in Pondicherry</li>
+        </ul>
+        <div class="md-tag">
+          <div class="md-avatar">V</div>
+          <div class="md-info">
+            <strong>Er. Venkataraman</strong>
+            <span>Managing Director, 30+ Years Experience</span>
+          </div>
+        </div>
+        <div style="margin-top: 24px;">
+          <a href="#services" class="btn btn-navy">Learn More About Our Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services" class="section" style="background: var(--white);">
+  <div class="container">
+    <div style="text-align: center;" class="reveal">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title" style="margin: 0 auto 12px;">Our Services</h2>
+      <p class="section-sub" style="margin: 0 auto;">Comprehensive construction &amp; design solutions for your dream home in Pondicherry.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://picsum.photos/seed/new-home-build/500/300" alt="New Home Construction Villianur" loading="lazy" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3>New Home Construction</h3>
+          <p>New builds in Villianur &amp; French City — fully furnished options ready to move in. 2BHK to 4BHK &amp; villas.</p>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://picsum.photos/seed/renovation-work/500/300" alt="House renovation Pondicherry" loading="lazy" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3>House Renovations</h3>
+          <p>Complete home makeovers — structural repairs, plastering, painting, flooring, and modern upgrades on any budget.</p>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://picsum.photos/seed/interior-design-room/500/300" alt="Interior design Pondicherry" loading="lazy" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+          </div>
+          <h3>Interior Design &amp; Furnishing</h3>
+          <p>Modular kitchens, wardrobe units, false ceilings, lighting design &amp; complete turn-key furnished homes.</p>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://picsum.photos/seed/civil-engineering-site/500/300" alt="Civil structural engineering Pondicherry" loading="lazy" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Civil &amp; Structural Engineering</h3>
+          <p>Expert civil &amp; structural engineering — RCC frames, foundation design, soil testing &amp; full site development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS / OFFERS ==================== -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">Current Offers</div>
+      <h2 class="section-title" style="margin:0 auto 12px;">New Build Houses Available Now</h2>
+      <p class="section-sub" style="margin:0 auto;">Best prices in Pondicherry — limited stock. Book a viewing before they're gone!</p>
+    </div>
+    <div class="projects-grid">
+      <div class="house-card reveal">
+        <div class="house-img">
+          <img src="https://picsum.photos/seed/house-3bhk-villianur/700/400" alt="3BHK Fully Furnished house Villianur" loading="lazy" />
+          <div class="house-badge">Fully Furnished</div>
+        </div>
+        <div class="house-body">
+          <div class="house-location">📍 Villianur, Pondicherry</div>
+          <h3>3BHK Fully Furnished Villa</h3>
+          <p>Luxury finishes, modular kitchen, wardrobes &amp; premium flooring. Prime location near Villianur bus stand.</p>
+          <div class="house-price">₹XX Lakhs <span>onward</span></div>
+          <div class="house-actions">
+            <a href="https://wa.me/919443069285?text=Hi%2C%20I'm%20interested%20in%20the%203BHK%20Villianur%20property" class="btn btn-orange btn-sm" target="_blank" rel="noopener">Book Viewing Now</a>
+            <a href="tel:+919443069285" class="btn btn-navy btn-sm">Call for Price</a>
+          </div>
+        </div>
+      </div>
+      <div class="house-card reveal">
+        <div class="house-img">
+          <img src="https://picsum.photos/seed/apartment-french-city/700/400" alt="2BHK French City Pondicherry" loading="lazy" />
+          <div class="house-badge">Semi-Furnished</div>
+        </div>
+        <div class="house-body">
+          <div class="house-location">📍 French City, Pondicherry</div>
+          <h3>2BHK Modern Apartment</h3>
+          <p>Modern amenities, walkable to beaches. Vibrant French Quarter neighbourhood with colonial charm.</p>
+          <div class="house-price">₹XX Lakhs <span>onward</span></div>
+          <div class="house-actions">
+            <a href="https://wa.me/919443069285?text=Hi%2C%20I'm%20interested%20in%20the%202BHK%20French%20City%20property" class="btn btn-orange btn-sm" target="_blank" rel="noopener">Book Viewing Now</a>
+            <a href="tel:+919443069285" class="btn btn-navy btn-sm">Call for Price</a>
+          </div>
+        </div>
+      </div>
+      <div class="house-card reveal">
+        <div class="house-img">
+          <img src="https://picsum.photos/seed/house-4bhk-spacious/700/400" alt="4BHK Villianur unfurnished" loading="lazy" />
+          <div class="house-badge">Unfurnished</div>
+        </div>
+        <div class="house-body">
+          <div class="house-location">📍 Villianur, Pondicherry</div>
+          <h3>4BHK Spacious Home</h3>
+          <p>Customizable, spacious plots with large open-plan living. Ideal for families wanting to personalize.</p>
+          <div class="house-price">₹XX Lakhs <span>onward</span></div>
+          <div class="house-actions">
+            <a href="https://wa.me/919443069285?text=Hi%2C%20I'm%20interested%20in%20the%204BHK%20Villianur%20property" class="btn btn-orange btn-sm" target="_blank" rel="noopener">Book Viewing Now</a>
+            <a href="tel:+919443069285" class="btn btn-navy btn-sm">Call for Price</a>
+          </div>
+        </div>
+      </div>
+      <div class="house-card reveal">
+        <div class="house-img">
+          <img src="https://picsum.photos/seed/ready-to-move-pondicherry/700/400" alt="Ready to move in Pondicherry" loading="lazy" />
+          <div class="house-badge limited">🔥 Limited Stock</div>
+        </div>
+        <div class="house-body">
+          <div class="house-location">📍 French City, Pondicherry</div>
+          <h3>Ready-to-Move Home</h3>
+          <p>Best deals on ready-to-move-in properties in French City. Furnished &amp; unfurnished options available.</p>
+          <div class="house-price" style="color: #c0392b;">Limited Offer!</div>
+          <div class="house-actions">
+            <a href="https://wa.me/919443069285?text=Hi%2C%20I'm%20interested%20in%20the%20Ready-to-Move%20French%20City%20property" class="btn btn-orange btn-sm" target="_blank" rel="noopener">Book Viewing Now</a>
+            <a href="tel:+919443069285" class="btn btn-navy btn-sm">Call for Price</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">Client Stories</div>
+      <h2 class="section-title" style="color:var(--white);margin:0 auto 8px;">What Our Clients Say</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6); margin: 0 auto;">Real families, real homes, real smiles — from Pondicherry and beyond.</p>
+    </div>
+    <div class="testimonials-viewport">
+      <div class="testimonials-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"Er. Venkataraman's team built our dream home on time and within budget. The quality of work is exceptional — every detail was perfect. Our Villianur home is everything we imagined and more!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Rajesh & Priya Kumar</div>
+              <div class="testi-loc">Villianur, Pondicherry</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"Smartview Constructions transformed our outdated house into a modern marvel. The interior team was creative and professional. I'd recommend them to anyone in Pondicherry without hesitation."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Anitha Suresh</div>
+              <div class="testi-loc">French City, Pondicherry</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"We bought a fully furnished 3BHK from Smartview — moved in within days! The quality of materials, the finishing, and the overall design exceeded our expectations. Best investment we ever made."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">M</div>
+            <div>
+              <div class="testi-name">Murugan Chandrasekaran</div>
+              <div class="testi-loc">Villianur, Pondicherry</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"Honest pricing, transparent dealings, and superb craftsmanship. Venkataraman Sir personally checked the quality at every stage. Our new home in French City is truly a work of art."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Sudha Balakrishnan</div>
+              <div class="testi-loc">French City, Pondicherry</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-dots reveal" id="sliderDots"></div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="section" style="background: var(--light);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="margin:0 auto 12px;">Ready to Build? Let's Talk!</h2>
+      <p class="section-sub" style="margin:0 auto;">Fill out the form or reach us directly. We respond within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="c-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg></div>
+              <div class="c-text"><strong>Phone</strong><span>+91-9443-069285</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="c-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div class="c-text"><strong>Email</strong><span>info@smartviewconstructions.com</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="c-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div class="c-text"><strong>Address</strong><span>Villianur, Pondicherry – 605 110, Tamil Nadu, India</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="c-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div class="c-text"><strong>Office Hours</strong><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;">
+            <a href="tel:+919443069285" class="btn btn-navy btn-sm">📞 Call Now</a>
+            <a href="https://wa.me/919443069285" class="btn btn-orange btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
+          </div>
+        </div>
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31404.51!2d79.7713!3d11.9339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a536028b5eb6e01%3A0xba6cd30b037fce72!2sVillianur%2C%20Puducherry!5e0!3m2!1sen!2sin!4v1700000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Smartview Constructions location Villianur Pondicherry">
+        </iframe>
+      </div>
+      <div class="contact-form reveal-right">
+        <h3>Book an Appointment</h3>
+        <div id="formSuccess" class="form-success">
+          ✅ Thank you! We'll contact you within 24 hours to confirm your appointment.
+        </div>
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name *</label>
+              <input type="text" id="fname" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone Number *</label>
+              <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="fservice">Interested In</label>
+            <select id="fservice">
+              <option value="">Select a service...</option>
+              <option>New Home Construction</option>
+              <option>House Renovation</option>
+              <option>Interior Design & Furnishing</option>
+              <option>Civil & Structural Engineering</option>
+              <option>Buy Ready-Made House</option>
+              <option>Site Development</option>
+              <option>Other Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" placeholder="Tell us about your project, budget, or any questions..."></textarea>
+          </div>
+          <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="submitForm()">
+            📅 Book Appointment Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo">Smartview Constructions<span>Pondicherry, India</span></div>
+        <p>Building dream homes across Pondicherry since 1994. Led by Er. Venkataraman MD, we deliver quality, trust, and craftsmanship on every project.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/919443069285" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#projects">Current Projects</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">New Home Construction</a></li>
+          <li><a href="#services">House Renovations</a></li>
+          <li><a href="#services">Interior Design</a></li>
+          <li><a href="#services">Civil Engineering</a></li>
+          <li><a href="#services">Site Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Smartview Constructions. Proudly serving Pondicherry since 1994.</span>
+      <span style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
+        <a href="#">Privacy Policy</a>
+        <a href="#contact">Book Appointment</a>
+        <a href="https://wa.me/919443069285" target="_blank" rel="noopener">WhatsApp Us</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOAT ==================== -->
+<div class="wa-float">
+  <div class="wa-pulse"></div>
+  <a href="https://wa.me/919443069285?text=Hello%20Smartview%20Constructions!" class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="sticky-cta">
+  <a href="tel:+919443069285" class="btn btn-navy btn-sm" style="flex:1; justify-content:center;">📞 Call Now</a>
+  <a href="https://wa.me/919443069285" class="btn btn-orange btn-sm" style="flex:1; justify-content:center;" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<!-- ==================== JAVASCRIPT – Language 3 ==================== -->
+<script>
+  // ——— Header Scroll Effect ———
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ——— Mobile Nav ———
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileClose = document.getElementById('mobileClose');
+
+  hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+  document.querySelectorAll('.mobile-link').forEach(l => {
+    l.addEventListener('click', () => mobileNav.classList.remove('open'));
+  });
+
+  // ——— Scroll Reveal ———
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ——— Testimonials Slider ———
+  const track = document.getElementById('testiTrack');
+  const dotsContainer = document.getElementById('sliderDots');
+  let currentSlide = 0;
+
+  function getSlidesPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
+  }
+
+  function getTotalSlides() {
+    const cards = track.querySelectorAll('.testi-card');
+    return Math.ceil(cards.length / getSlidesPerView());
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < getTotalSlides(); i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === currentSlide ? ' active' : '');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goToSlide(n) {
+    currentSlide = n;
+    const pct = (100 / getSlidesPerView()) * currentSlide;
+    track.style.transform = `translateX(-${pct}%)`;
+    dotsContainer.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === n);
+    });
+  }
+
+  buildDots();
+  let autoSlide = setInterval(() => {
+    const total = getTotalSlides();
+    goToSlide((currentSlide + 1) % total);
+  }, 4500);
+
+  window.addEventListener('resize', () => { buildDots(); goToSlide(0); });
+
+  // ——— Contact Form Submit ———
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    if (!name || !phone) {
+      alert('Please fill in your Name and Phone Number to proceed.');
+      return;
+    }
+    document.getElementById('contactForm').style.display = 'none';
+    const success = document.getElementById('formSuccess');
+    success.style.display = 'block';
+    // Send WhatsApp message
+    const service = document.getElementById('fservice').value;
+    const msg = document.getElementById('fmsg').value;
+    const waMsg = `Hello Smartview Constructions!%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service || 'General Enquiry')}%0AMessage: ${encodeURIComponent(msg || 'I would like to book an appointment.')}`;
+    setTimeout(() => {
+      window.open(`https://wa.me/919443069285?text=${waMsg}`, '_blank');
+    }, 800);
+  }
+
+  // ——— Smooth parallax on hero ———
+  window.addEventListener('scroll', () => {
+    const hero = document.getElementById('hero');
+    const scrolled = window.pageYOffset;
+    if (scrolled < window.innerHeight) {
+      hero.style.backgroundPositionY = `${scrolled * 0.4}px`;
+    }
+  });
+</script>
+</body>
+</html>
